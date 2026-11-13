@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+:root { --ink:#302d27; --muted:#777166; --cream:#faf7f1; --sand:#eee5d8; --accent:#98764e; --white:#fff; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--ink); font:16px/1.65 Arial,Helvetica,sans-serif; }
+.header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 7%; background:#fff; border-bottom:1px solid #eee8de; }
+.logo { color:var(--ink); text-decoration:none; font: bold 1.35rem Georgia,serif; }
+.logo span { color:var(--accent); }
+nav { display:flex; gap:22px; }
+nav a { color:var(--muted); text-decoration:none; font-size:.92rem; }
+nav a:hover { color:var(--accent); }
+.hero { text-align:center; padding:96px 7% 104px; background:linear-gradient(135deg,#f0e7d9,#fcfaf6); }
+.eyebrow { color:var(--accent); letter-spacing:.16em; font-size:.72rem; font-weight:700; }
+h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; line-height:1.2; }
+h1 { margin:18px 0; font-size:clamp(2.7rem,7vw,5rem); }
+h1 em { color:var(--accent); font-weight:400; }
+.hero > p:not(.eyebrow) { max-width:590px; margin:0 auto 28px; color:var(--muted); }
+.button { display:inline-block; padding:12px 22px; border-radius:4px; background:var(--ink); color:#fff; text-decoration:none; }
+.button:hover { background:var(--accent); }
+.welcome,.about { max-width:760px; margin:auto; padding:65px 7%; text-align:center; }
+.welcome p:last-child,.about p { color:var(--muted); }
+.categories { padding:65px 7%; background:#fff; text-align:center; }
+.categories h2,.welcome h2,.about h2,.coming h2 { font-size:2rem; }
+.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:1100px; margin:32px auto 0; text-align:left; }
+.tile { padding:24px 20px; border:1px solid #eee8de; border-radius:8px; background:var(--cream); }
+.emoji { font-size:2rem; }
+.tile h3 { margin:12px 0 7px; font-size:1.2rem; }
+.tile p { margin:0; color:var(--muted); font-size:.92rem; }
+.coming { max-width:760px; margin:65px auto; padding:42px 25px; border-radius:8px; background:var(--sand); text-align:center; }
+.coming p:last-child { color:var(--muted); }
+footer { padding:30px 7%; background:var(--ink); color:#fff; text-align:center; font-size:.85rem; }
+.disclosure { max-width:800px; margin:12px auto 0; color:#ddd5c9; font-size:.78rem; }
+@media(max-width:760px) { .header { align-items:flex-start; flex-direction:column; } nav { gap:16px; } .hero { padding:72px 7%; } .grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:430px) { .grid { grid-template-columns:1fr; } }
